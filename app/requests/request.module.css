@@ -1,0 +1,24 @@
+.Container {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.TitleContainer {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+.TitleContainer h5 {
+    padding-right: 100px;
+}
+
+.Container h5 {
+    padding-right: 40px;
+}

@@ -2,11 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Dosis';
 }
 
 body {
-    background: rgb(0, 30, 60);
+    background: #72A3B5;
 }
 
+body h1 {
+    font-size: 20em;
+    text-align: center;
+}
 
+body h5 {
+    font-size: 3em;
+}
