@@ -10,22 +10,27 @@ export default function HomePage() {
     const router = useRouter();
 
     async function request() {
-        await fetch('http://api.songrequests.tk/api/collections/requests/records', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                song_name,
-                
-                requester
+        try {
+            await fetch('http://api.songrequests.tk/api/collections/requests/records', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    song_name,
+                    song_artist,
+                    requester,
+                })
             })
-    })
-    setSong('');
-    setArtist('');
-    setRequester('')
+        } catch (err) {
+            console.log(err)
+        }
 
-    router.refresh();
+        setSong('');
+        setArtist('');
+        setRequester('')
+
+        router.refresh();
     }
 
     return (
