@@ -23,8 +23,8 @@ export default function HomePage() {
                 })
             })
         } catch (err) {
-            setSong(err)
-            throw err
+            setSong(err.toString());
+            throw err;
         }
 
         //setSong('');
