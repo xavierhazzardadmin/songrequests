@@ -27,7 +27,7 @@ export default function HomePage() {
             throw err
         }
 
-        setSong('');
+        //setSong('');
         setArtist('');
         setRequester('')
 
