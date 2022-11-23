@@ -23,14 +23,15 @@ export default function HomePage() {
                 })
             })
         } catch (err) {
-            console.log(err)
+            setSong(err)
+            throw err
         }
 
         setSong('');
         setArtist('');
         setRequester('')
 
-        router.refresh();
+        //router.refresh();
     }
 
     return (
