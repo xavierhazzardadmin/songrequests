@@ -1,13 +1,10 @@
-'use client'
-import { useRouter } from 'next/navigation'
+import Router from 'next/router'
 import React, { useState } from 'react'
 
 export default function HomePage() {
-    const [song_name, setSong] = useState('')
-    const [song_artist, setArtist] = useState('')
-    const [requester, setRequester] = useState('')
-
-    const router = useRouter();
+    const [song_name, setSong] = useState('');
+    const [song_artist, setArtist] = useState('');
+    const [requester, setRequester] = useState('');
 
     async function request() {
         try {
@@ -29,9 +26,9 @@ export default function HomePage() {
 
         setSong('');
         setArtist('');
-        setRequester('')
+        setRequester('');
 
-        router.refresh();
+        Router.replace('/');
     }
 
     return (
